@@ -41,7 +41,11 @@ function scrub(e) {
 }
 
 function expandFullscreen() {
-  console.log("clicked!");
+  if (!video.webkitDisplayFullscreen) {
+    video.webkitRequestFullscreen();
+  } else {
+    document.webkitExtiFullscreen();
+  }
 }
 
 /* Hook up the event listeners */
